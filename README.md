@@ -16,5 +16,5 @@ git clone https://github.com/margo-dubovik/clockify_daily_reporter.git
 pip install -r requirements.txt
 ```
 
-5. I the root of the project create a file ``.env`` and define the variables: API_KEY, USER_ID, WORKSPACE_ID, PROJECT_ID
+5. I the root of the project create a file ``.env`` and define the variables: API_KEY, USER_ID, WORKSPACE_ID
 6. To get the list of all time entries in Clockify, run file ``all_entries.py``.
