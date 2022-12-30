@@ -33,3 +33,9 @@ url = f'https://reports.api.clockify.me/v1/workspaces/{WORKSPACE_ID}/reports/sum
 summary_report = requests.post(url, headers=headers, json=data).json()
 summary_report_json = json.dumps(summary_report, indent=2, ensure_ascii=False)  # for pretty printing
 print(summary_report_json)
+
+### saving output to file
+# import sys
+#
+# with open('summary_report.txt', 'w') as sys.stdout:
+#     print(summary_report_json)

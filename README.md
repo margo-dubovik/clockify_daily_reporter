@@ -17,4 +17,7 @@ pip install -r requirements.txt
 ```
 
 5. I the root of the project create a file ``.env`` and define the variables: API_KEY, USER_ID, WORKSPACE_ID
-6. To get the list of all time entries in Clockify, run file ``all_entries.py``.
+6. To get the list of all time entries in Clockify, run the file ``all_entries.py``.
+7. To get a summary report with time, spent on each task, grouped by date, run the file ``summary_report.py``
+
+<i>If you want to save the report to file, uncomment the last 4 lines in ``summary_report.py``</i>
