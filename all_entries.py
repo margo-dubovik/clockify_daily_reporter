@@ -1,4 +1,5 @@
 import requests
+import json
 import os
 from dotenv import load_dotenv
 
@@ -13,6 +14,6 @@ headers = {'x-api-key': API_KEY}
 
 url = f'https://api.clockify.me/api/v1/workspaces/{WORKSPACE_ID}/user/{USER_ID}/time-entries'
 all_entries = requests.get(url, headers=headers).json()
-for entry in all_entries:
-    print(entry)
+all_entries_json = json.dumps(all_entries, indent=2, ensure_ascii=False)
+print(all_entries_json)
 
