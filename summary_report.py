@@ -1,5 +1,5 @@
-import json
 import requests
+import json
 import os
 from dotenv import load_dotenv
 
@@ -7,11 +7,9 @@ load_dotenv()
 
 API_KEY = os.getenv('API_KEY')
 WORKSPACE_ID = os.getenv('WORKSPACE_ID')
-PROJECT_ID = os.getenv('PROJECT_ID')
 USER_ID = os.getenv('USER_ID')
 
-headers = {'x-api-key': API_KEY,
-           "content-type": "application/json"}
+headers = {'x-api-key': API_KEY}
 
 data = {
     "dateRangeStart": "2022-12-29T00:00:00.000",
@@ -33,5 +31,5 @@ data = {
 
 url = f'https://reports.api.clockify.me/v1/workspaces/{WORKSPACE_ID}/reports/summary'
 summary_report = requests.post(url, headers=headers, json=data).json()
-summary_report_json = json.dumps(summary_report, indent=3, ensure_ascii=False)  # for pretty printing
+summary_report_json = json.dumps(summary_report, indent=2, ensure_ascii=False)  # for pretty printing
 print(summary_report_json)
